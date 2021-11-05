@@ -1,4 +1,7 @@
-select * from 社員マスタ;
+SELECT
+    *
+FROM
+    社員マスタ;
 
 INSERT INTO
     社員マスタ (社員コード)
@@ -6,7 +9,6 @@ VALUES
     ('0001');
 
 -- ▼ WinOfSql で作成
-
 INSERT INTO
     社員マスタ (
         社員コード,
@@ -90,7 +92,7 @@ INSERT INTO
         生年月日
     )
 SELECT
-    FORMAT( CONVERT(int,max(社員コード))+1 ,'0000'),
+    FORMAT(CONVERT(int, max(社員コード)) + 1, '0000'),
     --    LPAD(max(社員コード) + 1, 4, '0'),
     --    max(社員コード) + 1,
     'やまだたろう',
@@ -99,8 +101,8 @@ SELECT
     0,
     GETDATE(),
     GETDATE(),
---    10000,
-    FLOOR( RAND() * 1000 / 2 ) * 1000,
+    --    10000,
+    FLOOR(RAND() * 1000 / 2) * 1000,
     5000,
     '0050',
     '2000/01/01'
